@@ -45,6 +45,7 @@ const ConversationPage = () => {
       const response = await axios.post("/api/conversation/", {
         messages: newMessages,
       });
+      console.log(response);
       setMessages((current) => [...current, userMessage, response.data]);
       form.reset();
     } catch (error: any) {
@@ -77,7 +78,7 @@ const ConversationPage = () => {
                   <FormItem className="col-span-12 lg:col-span-10">
                     <FormControl className="m-0 p-0">
                       <Input
-                        className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                        className="p-5 border-0 outline-none focus-visible:ring-transparent"
                         disabled={isLoading}
                         placeholder="How do I calculate the area of a circle?"
                         {...field}
@@ -104,7 +105,7 @@ const ConversationPage = () => {
           {messages.length === 0 && !isLoading && (
             <Empty label="No conversation started 🙁" />
           )}
-          <div className="flex flex-col-reverse gap-y-4">
+          <div className="flex flex-col gap-y-4">
             {messages.map((message) => (
               <div
                 key={message.content as string}
