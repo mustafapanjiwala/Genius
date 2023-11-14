@@ -6,10 +6,8 @@ import Sidebar from "./sidebar";
 
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { getApiLimitCount } from "@/lib/api-limit";
 
 const MobileSidebar = async () => {
-  const apiLimitCount = await getApiLimitCount();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
