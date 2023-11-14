@@ -26,7 +26,7 @@ const MobileSidebar = async () => {
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="p-0">
-        <Sidebar apiLimitCount={apiLimitCount} />
+        <Sidebar />
       </SheetContent>
     </Sheet>
   );
