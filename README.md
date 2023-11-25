@@ -50,7 +50,7 @@ To set up and run Genius on your local machine, follow these steps:
    ```
 4. Start the application.
    ```bash
-   npm run start
+   npm run dev
    ```
 
 The application should now be running on `http://localhost:3000/`.
