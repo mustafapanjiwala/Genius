@@ -1,37 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 # Genius
+
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Repo Size](https://img.shields.io/github/repo-size/anuragts/Genius.svg)](https://github.com/anuragts/Genius)
+[![Forks](https://img.shields.io/github/forks/anuragts/Genius.svg)](https://github.com/anuragts/Genius)
+
+Genius is a repository created using TypeScript, JavaScript, and CSS. It is a project with a size of 2740.
+
+## Contributing
+
+Contributions are welcomed and encouraged! To contribute to Genius, follow these steps:
+
+1. Fork the repository.
+2. Clone the forked repository to your local machine.
+   ```bash
+   git clone https://github.com/your-username/Genius.git
+   ```
+3. Navigate to the project directory.
+   ```bash
+   cd Genius
+   ```
+4. Install the necessary dependencies.
+   ```bash
+   npm install
+   ```
+5. Make your desired changes.
+6. Commit and push your changes.
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   git push origin main
+   ```
+7. Create a new pull request.
+
+## Installation
+
+To set up and run Genius on your local machine, follow these steps:
+
+1. Clone the repository.
+   ```bash
+   git clone https://github.com/anuragts/Genius.git
+   ```
+2. Navigate to the project directory.
+   ```bash
+   cd Genius
+   ```
+3. Install the necessary dependencies.
+   ```bash
+   npm install
+   ```
+4. Start the application.
+   ```bash
+   npm run start
+   ```
+
+The application should now be running on `http://localhost:3000/`.
+
+## License
+
+This project is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
