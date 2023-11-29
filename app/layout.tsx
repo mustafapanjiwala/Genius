@@ -4,6 +4,8 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Suspense } from "react";
 
+import { ModalProvider } from "@/components/modal-provider";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,7 +22,10 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <Suspense>{children}</Suspense>
+          <Suspense>
+            <ModalProvider />
+            {children}
+          </Suspense>
         </body>
       </html>
     </ClerkProvider>
