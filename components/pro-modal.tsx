@@ -1,3 +1,5 @@
+import axios from "axios";
+import { useState } from "react";
 import { useProModal } from "@/app/hooks/use-pro-modal";
 import {
   Dialog,
@@ -56,6 +58,19 @@ const tools = [
 
 export const ProModal = () => {
   const proModal = useProModal();
+  const [loading, setLoading] = useState(false);
+
+  const onSubscribe = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get("/api/stripe");
+      window.location.href = response.data.url;
+    } catch (err) {
+      console.log(err, "STRIPE CLIENT ERROR");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
@@ -63,7 +78,7 @@ export const ProModal = () => {
         <DialogHeader>
           <DialogTitle className="flex justify-center items-center flex-col gap-y-4 pb-2">
             <div className="flex items-center gap-x-2 font-bold py-1">
-              Upgrade to Genius
+              Upgrade to Fusion AI
               <Badge variant="premium" className="uppercase text-sm py-1">
                 Pro
               </Badge>
@@ -90,7 +105,12 @@ export const ProModal = () => {
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-          <Button size="lg" variant="premium" className="w-full">
+          <Button
+            size="lg"
+            variant="premium"
+            className="w-full"
+            onClick={onSubscribe}
+          >
             Upgrade <Zap className="w-4 h-4 m'-2 fill-white" />
           </Button>
         </DialogFooter>

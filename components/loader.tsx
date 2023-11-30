@@ -7,7 +7,7 @@ export const Loader = () => {
         <Image alt="Logo" fill src="/logo.png" />
       </div>
       <div className="text-sm text-muted-foregoround">
-        Genius is thinking ...
+        Fusion AI is thinking ...
       </div>
     </div>
   );

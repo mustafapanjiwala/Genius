@@ -64,9 +64,10 @@ const routes = [
 
 interface SidebarProps {
   apiLimitCount?: number;
+  isPro: boolean;
 }
 
-const Sidebar = ({ apiLimitCount = 0 }: SidebarProps) => {
+const Sidebar = ({ apiLimitCount = 0, isPro = false }: SidebarProps) => {
   const pathName = usePathname();
   return (
     <div className="space-y-4 py4 flex flex-col h-full bg-[#111827] text-white">
@@ -76,7 +77,7 @@ const Sidebar = ({ apiLimitCount = 0 }: SidebarProps) => {
             <Image fill alt="logo" src="/logo.png" />
           </div>
           <h1 className={cn("text-2xl font-bold", montserrat.className)}>
-            Genius
+            Fusion AI
           </h1>
         </Link>
         <div className="space-y-1">
@@ -99,7 +100,7 @@ const Sidebar = ({ apiLimitCount = 0 }: SidebarProps) => {
           ))}
         </div>
       </div>
-      <FreeCounter apiLimitCount={apiLimitCount} />
+      <FreeCounter apiLimitCount={apiLimitCount} isPro={isPro} />
     </div>
   );
 };
