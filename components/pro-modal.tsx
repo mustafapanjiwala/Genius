@@ -22,6 +22,7 @@ import {
 import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
+import toast from "react-hot-toast";
 
 const tools = [
   {
@@ -66,7 +67,7 @@ export const ProModal = () => {
       const response = await axios.get("/api/stripe");
       window.location.href = response.data.url;
     } catch (err) {
-      console.log(err, "STRIPE CLIENT ERROR");
+      toast.error("Something went wrong, please try again later.");
     } finally {
       setLoading(false);
     }
@@ -106,6 +107,7 @@ export const ProModal = () => {
         </DialogHeader>
         <DialogFooter>
           <Button
+            disabled={loading}
             size="lg"
             variant="premium"
             className="w-full"

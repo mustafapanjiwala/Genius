@@ -12,7 +12,7 @@ interface MobileSidebarProps {
   isPro?: boolean;
 }
 
-const MobileSidebar = async ({
+const MobileSidebar = ({
   apiLimitCount = 0,
   isPro = false,
 }: MobileSidebarProps) => {
