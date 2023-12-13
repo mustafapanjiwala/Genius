@@ -12,7 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Fusion AI",
-  description: "AI Platform",
+  description:
+    "Explore AI-powered tools for image & video generation, music creation, code generation, and more. Get instant support with our built-in conversational bot. ✨",
 };
 
 export default function RootLayout({
